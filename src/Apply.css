@@ -1,0 +1,15 @@
+.apply-button {
+  background-color: drop-shadow(0 0 12px cyan);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.apply-button:hover {
+  background-color: drop-shadow(0 0 12px cyan);
+}

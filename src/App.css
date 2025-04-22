@@ -1,0 +1,322 @@
+/* ==== GLOBAL RESET ==== */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Arimo", sans-serif;
+  overflow-y: scroll;
+  /* overscroll-behavior: auto; */
+  /* scroll-behavior: smooth; */
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body {
+  flex: 1; /* take up all remaining height */
+}
+
+/* ==== BACKGROUND ==== */
+body {
+  background-image: url("/ttbBackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==== MAIN CONTENT ==== */
+.app-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  color: white;
+}
+
+/* ==== HEADINGS ==== */
+h1 {
+  font-family: "arimo", sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 20px rgb(239, 31, 159);
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+h2 {
+  font-size: clamp(15px, 1.5vw, 40px);
+  font-weight: bold;
+  text-align: center;
+  color: rgb(160, 244, 247);
+  text-shadow: 0 0 20px rgb(92, 225, 230);
+  padding: 0.5rem;
+}
+
+h3 {
+  font-size: clamp(25px, 2.5vw, 45px);
+  font-weight: bold;
+  text-align: center;
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 20px rgb(239, 31, 159);
+  padding: 0.5rem;
+}
+
+h4 {
+  font-weight: bold;
+  text-align: justify;
+  color: rgb(160, 244, 247);
+  text-shadow: 0 0 20px rgb(92, 225, 230);
+  padding: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+h5 {
+  font-size: clamp(15px, 1.8vw, 40px);
+  font-weight: bold;
+  text-align: center;
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 20pxrgb (239, 31, 159);
+  margin: 0rem;
+  padding: 0.5rem;
+}
+
+p {
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ==== COLOURS ==== */
+
+.dyeitpink {
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 20px rgb(239, 31, 159);
+}
+
+.dyeitblue {
+  color: rgb(160, 244, 247);
+  text-shadow: 0 0 20px rgb(92, 225, 230);
+}
+
+.dyeitwhite {
+  color: white;
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.8);
+}
+
+.leftalign {
+  text-align: left;
+}
+
+.smallfont {
+  font-size: 1rem;
+}
+
+.spacer {
+  margin-bottom: 1rem;
+}
+
+.spacerbig {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.spacerbig {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* ==== BUTTON ==== */
+.button,
+.submit-button,
+.cancel-button {
+  background-color: #fb89d0;
+  color: #1a0617 !important;
+  text-shadow: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.button:hover,
+.submit-button:hover,
+.cancel-button:hover {
+  background-color: #ff9de0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+  text-shadow: 0 0 15px rgb(239, 31, 159);
+  text-decoration: underline;
+}
+
+/* ==== COLUMNS ==== */
+
+.two-column {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.column {
+  flex: 1;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.left {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.right {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* PHOTOS */
+
+.photo {
+  max-width: 100%;
+  height: auto;
+  /* padding: 10px 20px; */
+  box-sizing: border-box;
+}
+
+.stats-image {
+  max-width: 80%; /* or 60%, or even px: 300px */
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .stats-image {
+    max-width: 90%;
+  }
+}
+
+/* HYPERLINK */
+
+a {
+  color: rgb(160, 244, 247);
+  text-decoration: none;
+  text-shadow: 0 0 10px rgb(92, 225, 230);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 15px rgb(239, 31, 159);
+  text-decoration: underline;
+}
+
+#border {
+  position: relative;
+  border: 2px solid rgb(250, 122, 201);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  width: fit-content;
+  margin: 75px auto;
+}
+
+/* MOBILE SCREENS */
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically on small screens */
+  }
+  .container-reverse {
+    flex-direction: column-reverse; /* Stack columns vertically on small screens */
+  }
+  .column-1,
+  .column-2 {
+    flex: 1 1 100%; /* Each column takes full width on mobile */
+    margin-right: 0; /* Remove margin between columns */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .two-column {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .photo {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* For our special home-block, stack vertically */
+  .home-block {
+    flex-direction: column !important;
+  }
+  /* Ensure the text-block comes first and the image-block second */
+  .home-block .text-block {
+    order: 1;
+  }
+  .home-block .image-block {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-break {
+    display: block;
+    text-align: left;
+  }
+
+  .thetechbros {
+    text-align: left;
+    display: block;
+    font-size: 5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+/* BOUNCE SCROLL */
+
+/* .scroll-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.bounce {
+  animation: bounce-back 0.4s cubic-bezier(0.33, 1, 0.68, 1); 
+} */
+/* spring feel */
+
+/*@keyframes bounce-back {
+    0%   { transform: translateY(0); }
+    70%  { transform: translateY(100px); }
+    100% { transform: translateY(0); }
+  }*/
+
+/* Remove focus outlines globally */
+*:focus {
+  outline: none !important; /* Remove the focus outline */
+  box-shadow: none !important; /* Remove any focus box-shadow */
+}

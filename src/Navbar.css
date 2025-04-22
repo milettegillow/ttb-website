@@ -1,0 +1,88 @@
+/* ==== NAVBAR ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  border-bottom: 3px solid rgb(160, 244, 247);
+  box-shadow: 0 8px 8px rgb(92, 225, 230, 0.4);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 20px rgb(239, 31, 159);
+  font-size: 1.6rem;
+  font-weight: 1000;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger icon: hidden on desktop, visible on mobile */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: rgb(250, 122, 201);
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  /* When open, show the menu and add the neon border at the very bottom */
+  .navbar-menu.open {
+    display: flex;
+    border-bottom: 3px solid rgb(160, 244, 247);
+    box-shadow: 0 8px 8px rgb(92, 225, 230, 0.4);
+  }
+  .navbar-menu.closed {
+    display: none;
+  }
+
+  /* Hamburger icon appears */
+  .hamburger-icon {
+    display: block;
+  }
+
+  /* Hide the menu by default */
+  .navbar-menu {
+    position: absolute;
+    top: 100%; /* directly below navbar */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  /* Optionally, adjust the font size for nav links */
+  .navbar-link {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,147 @@
+.events-page {
+  position: relative;
+  z-index: 1;
+  margin: 2rem;
+}
+
+.events-page .photo {
+  border-radius: 10% !important;
+}
+
+.two-column.compact {
+  gap: 1rem;
+  padding-top: 2rem; /* original spacing */
+  padding-bottom: 0rem; /* tighter bottom */
+}
+
+.two-column.compact .column {
+  padding: 0rem;
+  margin-top: 3rem !important;
+  background-color: transparent;
+}
+
+/* If a regular block comes directly after a compact one, reduce the vertical gap */
+.two-column.compact + .two-column {
+  margin-top: 0rem !important;
+}
+
+.events-page .two-column {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.events-page h3 {
+  margin-top: 0.5rem; /* or 0 if you want it super tight */
+  margin-bottom: 0.5rem; /* or 0 if you want it super tight */
+}
+
+.column {
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.column.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+}
+
+.column.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+}
+
+.events-page .two-column.reverse .left {
+  order: 2; /* Moves left column to the right */
+}
+
+.events-page .two-column.reverse .right {
+  order: 1; /* Moves right column to the left */
+}
+
+/* Reduce bottom margin of entire block */
+.two-column.compact {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0rem;
+}
+
+/* MOBILE VIEW */
+
+@media screen and (max-width: 768px) {
+  .central-halogen {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .two-column.reverse .column.left {
+    order: unset !important;
+  }
+
+  .two-column.reverse .column.right {
+    order: unset !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Push the events down a bit */
+  .events-page {
+    padding-top: 2rem;
+    margin: 1rem; /* Optional: reduce overall margin */
+  }
+
+  /* For all two-column blocks on mobile, stack them without extra space */
+  .two-column {
+    flex-direction: column !important;
+    gap: 0.5rem !important; /* reduced gap between stacked blocks */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* For each column inside a two-column block, reduce inner padding */
+  .column {
+    padding: 0.5rem; /* reduce from 1rem to 0.5rem */
+    margin: 0;
+  }
+
+  /* Ensure images resize properly on mobile */
+  .photo {
+    margin-top: 0.3rem;
+    padding-top: 0;
+    margin-bottom: 1rem;
+    border-radius: 0rem;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .events-page h3,
+  .events-page h4,
+  .events-page p {
+    margin: 0.5rem 0rem; /* even smaller margins */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Override compact spacing on mobile */
+  .two-column.compact {
+    gap: 0rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .two-column.compact .column {
+    margin-top: 0rem !important;
+    padding: 0rem !important;
+  }
+}

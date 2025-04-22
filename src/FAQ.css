@@ -1,0 +1,72 @@
+/* ==== FAQ CONTAINER ==== */
+.faq-container {
+  /* width: 100vw !important; */
+  max-width: none !important;
+  margin: 0;
+  padding: 2rem;
+  align-items: center !important;
+}
+
+/* ==== FAQ ITEM ==== */
+.faq-item {
+  width: 100%; /* Ensure it takes up the full width */
+  box-sizing: border-box; /* Include padding and border in total width */
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgb(250, 122, 201);
+  padding-bottom: 1rem;
+}
+
+/* ==== FAQ QUESTION BUTTON ==== */
+.faq-question {
+  width: 100%; /* Make sure the question spans the entire width */
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.5rem;
+  color: rgb(250, 122, 201);
+  text-shadow: 0 0 20px rgb(239, 31, 159);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+/* FAQ hover effect */
+.faq-question:hover {
+  color: white;
+  text-shadow: 0 0 25px rgb(239, 31, 159);
+  background-color: transparent;
+}
+
+/* ==== FAQ ANSWER ==== */
+.faq-answer {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: rgb(160, 244, 247);
+  text-shadow: 0 0 15px rgb(92, 225, 230);
+  padding: 0 1rem;
+  line-height: 1.6;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding-left: 2.2rem;
+
+  /* Base state (closed) */
+  max-height: 0;
+  opacity: 0;
+
+  /* 🔥 No transition here! So it snaps shut */
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+
+  /* 🔥 Transitions only apply when OPEN */
+  transition: max-height 0.8s ease, opacity 0.3s ease-in;
+}
+
+.faq-container h2,
+.faq-question {
+  padding-left: 2rem;
+}
